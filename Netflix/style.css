@@ -1,0 +1,179 @@
+/*Aqui definimos o fundo e a fonte da página.*/
+body {
+    margin: 0;/*Retira a margem padrão da página.*/
+    background-color: #141414;/*Define o fundo escuro.*/
+    color: #FFFFFF;/*Define a cor branca dos textos.*/
+    font-family: Arial;/*Usa a fonte Arial.*/
+}
+a {
+    color: #FFFFFF;/*Deixa os links brancos.*/
+    text-decoration: none;/*Retira o sublinhado, como no Portal.*/
+}
+/*Aqui organizamos o menu superior com flex.*/
+.topo {
+    display: flex;/*Coloca os blocos lado a lado.*/
+    justify-content: space-between;/*Distribui o espaço entre os blocos.*/
+    align-items: center;/*Alinha os blocos na vertical.*/
+    flex-wrap: wrap;/*Permite a quebra em telas menores.*/
+    gap: 15px;/*Separa os blocos do menu.*/
+    padding: 18px 4%;/*Cria espaço por dentro do cabeçalho.*/
+    background-color: #141414;/*Define o fundo do menu.*/
+}
+.logo {
+    margin: 0;/*Retira a margem do título.*/
+    color: #E50914;/*Usa o vermelho da Netflix.*/
+    font-size: 32px;/*Define o tamanho da logo.*/
+}
+.menu, .icones {
+    display: flex;/*Coloca os links lado a lado.*/
+    align-items: center;/*Centraliza os itens na vertical.*/
+    flex-wrap: wrap;/*Evita que os links escapem da tela.*/
+    gap: 15px;/*Cria espaço entre os links.*/
+}
+.menu a {
+    font-size: 14px;/*Define o tamanho dos links.*/
+}
+.avatar {
+    width: 30px;/*Define a largura do avatar.*/
+    height: 30px;/*Define a altura do avatar.*/
+    background-color: #E50914;/*Pinta o quadradinho de vermelho.*/
+    border-radius: 4px;/*Arredonda os cantos do avatar.*/
+}
+/*Aqui colocamos o texto sobre a imagem do destaque.*/
+.destaque {
+    position: relative;/*Serve de referência para os textos.*/
+    height: 520px;/*Define a altura do destaque.*/
+    background-color: #333;/*Mostra um fundo sem a imagem.*/
+}
+.destaque img {
+    width: 100%;/*Ocupa toda a largura do destaque.*/
+    height: 100%;/*Ocupa toda a altura do destaque.*/
+    object-fit: cover;/*Preenche o espaço sem deformar a imagem.*/
+}
+.texto-destaque {
+    position: absolute;/*Coloca os textos sobre a imagem.*/
+    top: 150px;/*Afasta os textos do topo.*/
+    left: 4%;/*Afasta os textos da borda esquerda.*/
+}
+.texto-destaque p {
+    margin: 0;/*Retira a margem do texto pequeno.*/
+    font-size: 14px;/*Define o tamanho da palavra SÉRIE.*/
+    font-weight: bold;/*Deixa o texto em negrito.*/
+}
+.texto-destaque h2 {
+    margin: 10px 0 25px;/*Separa o título dos botões.*/
+    font-size: 72px;/*Deixa o título grande.*/
+}
+.botao {
+    display: inline-block;/*Permite dar tamanho e espaço ao link.*/
+    padding: 12px 20px;/*Cria o espaço interno do botão.*/
+    margin: 0 10px 10px 0;/*Separa os botões.*/
+    background-color: #FFFFFF;/*Define o fundo branco.*/
+    color: #141414;/*Deixa o texto escuro.*/
+    font-size: 18px;/*Define o tamanho do texto.*/
+    border-radius: 4px;/*Arredonda os cantos do botão.*/
+}
+.informacoes {
+    background-color: #555;/*Define o fundo cinza.*/
+    color: #FFFFFF;/*Deixa o texto branco.*/
+}
+.idade {
+    position: absolute;/*Coloca a classificação sobre o destaque.*/
+    right: 4%;/*Afasta o quadrado da borda direita.*/
+    bottom: 30px;/*Afasta o quadrado da borda inferior.*/
+    width: 40px;/*Define a largura do quadrado.*/
+    height: 40px;/*Define a altura do quadrado.*/
+    display: flex;/*Permite centralizar o número.*/
+    justify-content: center;/*Centraliza o número na horizontal.*/
+    align-items: center;/*Centraliza o número na vertical.*/
+    background-color: #E50914;/*Define o fundo vermelho.*/
+    font-size: 20px;/*Define o tamanho do número.*/
+}
+/*Aqui organizamos as fileiras de capas.*/
+.conteudo {
+    margin: 25px 0 0 4%;/*Afasta o catálogo do topo e da esquerda.*/
+}
+.categoria {
+    margin: 0 0 20px;/*Separa uma categoria da outra.*/
+    overflow: hidden;/*Corta a fileira na borda da página.*/
+}
+.categoria h3 {
+    margin: 0;/*Retira a margem padrão do título.*/
+    font-size: 22px;/*Define o tamanho dos títulos.*/
+}
+.fileira {
+    display: flex;/*Coloca as capas lado a lado.*/
+    flex-wrap: nowrap;/*Mantém todas as capas na mesma linha.*/
+    align-items: center;/*Centraliza as capas na vertical.*/
+    gap: 1vw;/*Separa as capas.*/
+    width: 107vw;/*Reserva espaço para as seis capas sem encolher.*/
+    height: 10vw;/*Mantém uma altura definida para as capas.*/
+    padding: 15px 0;/*Reserva espaço para o zoom do hover.*/
+    overflow: hidden;/*Esconde o que ultrapassar o espaço da fileira.*/
+}
+.card {
+    width: 17vw;/*Define a largura de cada capa.*/
+    height: 10vw;/*Define a altura de cada capa.*/
+    background-color: #333;/*Mantém o card visível sem imagem.*/
+    border-radius: 4px;/*Arredonda os cantos do card.*/
+    transition: 0.5s;/*Suaviza a mudança de tamanho.*/
+}
+.card img {
+    width: 17vw;/*Mantém a largura mesmo dentro do flex.*/
+    height: 10vw;/*Define a altura da imagem.*/
+    object-fit: cover;/*Preenche a capa sem deformar a imagem.*/
+    border-radius: 4px;/*Arredonda os cantos da imagem.*/
+}
+.card:hover {
+    transform: scale(1.1);/*Aumenta o card ao passar o mouse.*/
+}
+/*Aqui colocamos os números ao lado das capas em pé.*/
+.top10 .fileira, .top10 .card {
+    height: 18vw;/*Deixa esta fileira mais alta.*/
+}
+.top10 .fileira {
+    padding: 20px 0;/*Reserva mais espaço para o zoom das capas em pé.*/
+}
+.top10 .card {
+    position: relative;/*Serve de referência para o número.*/
+}
+.top10 p {
+    position: absolute;/*Coloca o número ao lado da capa.*/
+    left: 0;/*Encosta o número na esquerda do card.*/
+    bottom: 0;/*Encosta o número na parte inferior.*/
+    margin: 0;/*Retira a margem do parágrafo.*/
+    color: #B3B3B3;/*Deixa o número cinza claro.*/
+    font-size: 13vw;/*Deixa o número grande.*/
+    font-weight: bold;/*Destaca o número em negrito.*/
+}
+.top10 img {
+    margin-left: 6vw;/*Reserva espaço para o número.*/
+    width: 11vw;/*Deixa a capa mais estreita.*/
+    height: 18vw;/*Deixa a capa em pé.*/
+}
+/*Aqui organizamos as quatro colunas do rodapé.*/
+.rodape {
+    margin: 30px 4%;/*Afasta o rodapé das bordas.*/
+    color: #B3B3B3;/*Deixa o texto cinza claro.*/
+}
+.colunas {
+    display: flex;/*Coloca as colunas lado a lado.*/
+    justify-content: space-between;/*Distribui as colunas no rodapé.*/
+    flex-wrap: wrap;/*Permite quebrar as colunas em telas menores.*/
+    gap: 20px;/*Separa as colunas.*/
+}
+.coluna {
+    width: 200px;/*Define a largura de cada coluna.*/
+}
+.coluna a {
+    display: inline-block;/*Permite definir a largura dos links.*/
+    width: 100%;/*Coloca cada link em sua própria linha.*/
+    margin: 8px 0;/*Separa os links na vertical.*/
+    color: #B3B3B3;/*Deixa os links cinza claro.*/
+    font-size: 14px;/*Define o tamanho dos links.*/
+}
+.assinatura {
+    margin: 40px 0 0;/*Separa a identificação dos links.*/
+    font-size: 14px;/*Define o tamanho da identificação.*/
+    text-align: center;/*Centraliza os dados da atividade.*/
+}
